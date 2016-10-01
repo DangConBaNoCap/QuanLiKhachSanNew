@@ -1,0 +1,7 @@
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\bin\Debug\DAO.dll
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\bin\Debug\DAO.pdb
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\bin\Debug\DTO.dll
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\bin\Debug\DTO.pdb
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
+c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb
