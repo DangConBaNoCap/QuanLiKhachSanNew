@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 using System.Data;
 using System.Data.SqlClient;
-using DTO;
 namespace DAO
 {
     public class KhachHang_DAO
@@ -21,11 +21,11 @@ namespace DAO
             return dt;
         }
 
-        public static bool Them(KhachHang_DTO KH)
+        public static bool Them(KhachHang_DTO DV)
         {
             try
             {
-                string sTruyVan = string.Format("Insert into KhachHang(HoTenKH,DiaChi,DienThoai,GioiTinh,CMND) values(N'{0}',N'{1}','{2}',N'{3}')", KH.HoTenKH,KH.DiaChi,KH.DienThoai,KH.GioiTinh,KH.CMND);
+                string sTruyVan = string.Format("Insert into KhachHang(HoTenKH,DiaChi,DienThoai,GioiTinh,CMND) values(N'{0}',N'{1}','{2}','{3}','{4}')",DV.HoTenKH,DV.DiaChi,DV.DienThoai,DV.GioiTinh,DV.CMND);
                 con = DataProvider.KetNoi();
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
@@ -37,12 +37,12 @@ namespace DAO
             }
         }
 
-        public static bool Sua(KhachHang_DTO KH)
+        public static bool Sua(KhachHang_DTO DV)
         {
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Update KhachHang set HoTenKH= N'{0}',DiaChi=N'{1}',DienThoai='{2}',GioiTinh=N'{3}',CMND='{4}' where MaKH='{5}'",KH.HoTenKH,KH.DiaChi,KH.DienThoai,KH.GioiTinh,KH.CMND,KH.MaKH);
+                string sTruyVan = string.Format("Update KhachHang set HoTenKH= N'{0}',DiaChi=N'{1}',DienThoai='{2}',GioiTinh='{3}',CMND='{4}' where MaKH='{5}'", DV.HoTenKH,DV.DiaChi,DV.DienThoai,DV.GioiTinh,DV.CMND,DV.MaKH);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
@@ -53,12 +53,12 @@ namespace DAO
             }
         }
 
-        public static bool Xoa(KhachHang_DTO KH)
+        public static bool Xoa(KhachHang_DTO DV)
         {
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Delete From  KhachHang  where MaKH = '{0}'", KH.MaKH);
+                string sTruyVan = string.Format("Delete From  KhachHang  where MaKH = '{0}'", DV.MaKH);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;

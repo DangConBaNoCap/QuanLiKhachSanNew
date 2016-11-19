@@ -5,3 +5,10 @@ c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\bin\
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DAO.dll
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DAO.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DTO.dll
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DTO.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb

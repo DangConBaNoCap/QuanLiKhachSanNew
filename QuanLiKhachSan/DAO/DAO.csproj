@@ -40,10 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietThuePhong_DAO.cs" />
-    <Compile Include="KhachHang.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DichVu_DAO.cs" />
     <Compile Include="HDThanhToanPhong_DAO.cs" />
+    <Compile Include="KhachHang_DAO.cs" />
     <Compile Include="LoaiPhong_DAO.cs" />
     <Compile Include="NhanVien_DAO.cs" />
     <Compile Include="Phong_DAO.cs" />
