@@ -2,15 +2,10 @@
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DTO;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLiKhachSan.Quan_Li_Khach
@@ -18,7 +13,8 @@ namespace QuanLiKhachSan.Quan_Li_Khach
     public partial class KhachHangListView : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private List<KhachHang_DTO> _listKhachHang = new List<KhachHang_DTO>();
-        KhachHang_DTO CurrentKhachHang
+
+        private KhachHang_DTO CurrentKhachHang
         {
             get
             {
@@ -26,6 +22,7 @@ namespace QuanLiKhachSan.Quan_Li_Khach
                 return gridView1.GetRow(gridView1.FocusedRowHandle) as KhachHang_DTO;
             }
         }
+
         private bool AllowEdit
         {
             get
@@ -35,40 +32,44 @@ namespace QuanLiKhachSan.Quan_Li_Khach
                 return gridView1.SelectedRowsCount == 2;
             }
         }
+
         public KhachHangListView()
         {
             InitializeComponent();
             init();
-            
         }
+
         private void init()
         {
             gcListKhachHang.DataSource = GetAllData();
             bbiSuaKH.Enabled = false;
         }
-        object GetKHsData()
+
+        private object GetKHsData()
         {
             IEnumerable ret = from _khachHang in _listKhachHang
                               select _khachHang;
             return ret.Cast<KhachHang_DTO>().ToList();
         }
-        object ConverToListKH(DataTable ds)
+
+        private object ConverToListKH(DataTable ds)
 
         {
             _listKhachHang.Clear();
             for (int i = 0; i < ds.Rows.Count; i++)
             {
                 KhachHang_DTO temp = new KhachHang_DTO();
-                temp.MaKH= (int)ds.Rows[i]["MaKH"];
-                temp.HoTenKH= ds.Rows[i]["HoTenKH"].ToString();
-                temp.DiaChi= ds.Rows[i]["DiaChi"].ToString();
-                temp.DienThoai= ds.Rows[i]["DienThoai"].ToString();
+                temp.MaKH = (int)ds.Rows[i]["MaKH"];
+                temp.HoTenKH = ds.Rows[i]["HoTenKH"].ToString();
+                temp.DiaChi = ds.Rows[i]["DiaChi"].ToString();
+                temp.DienThoai = ds.Rows[i]["DienThoai"].ToString();
                 temp.GioiTinh = (int)ds.Rows[i]["GioiTinh"];
-                temp.CMND=(int)ds.Rows[i]["CMND"];
+                temp.CMND = (int)ds.Rows[i]["CMND"];
                 _listKhachHang.Add(temp);
             }
             return null;
         }
+
         private object GetAllData()
         {
             DataTable listKhachHang = new DataTable();
@@ -78,17 +79,20 @@ namespace QuanLiKhachSan.Quan_Li_Khach
 
             return GetKHsData();
         }
+
         private void EnabledActionButtons()
         {
             if (CurrentKhachHang != null)
                 EnabledFlagButtons(true, AllowEdit);
             else EnabledFlagButtons(false, AllowEdit);
         }
+
         internal void EnabledFlagButtons(bool enabledCurrentTask, bool enabledEdit)
         {
             bbiXoaKH.Enabled = enabledCurrentTask;
             bbiSuaKH.Enabled = enabledEdit;
         }
+
         private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
             EnabledActionButtons();
@@ -103,7 +107,8 @@ namespace QuanLiKhachSan.Quan_Li_Khach
             }
             init();
         }
-        void RemoveCurrentKH(List<KhachHang_DTO> list)
+
+        private void RemoveCurrentKH(List<KhachHang_DTO> list)
         {
             if (gridView1.SelectedRowsCount == 0 && CurrentKhachHang != null) list.Remove(CurrentKhachHang);
             else
@@ -116,7 +121,8 @@ namespace QuanLiKhachSan.Quan_Li_Khach
                 }
                 foreach (KhachHang_DTO task in selectedTasks)
                 {
-                    KhachHang_DAO.Xoa(task);
+                    if(!KhachHang_DAO.Xoa(task)) XtraMessageBox.Show("Khách hàng đang đặt phòng,không thể xóa",
+                        "Thông Báo");
                     list.Remove(task);
                 }
             }

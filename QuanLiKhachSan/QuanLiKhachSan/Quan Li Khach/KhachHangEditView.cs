@@ -31,7 +31,7 @@ namespace QuanLiKhachSan.Quan_Li_Khach
         }
         private void initForm(KhachHang_DTO temp)
         {
-            teMaKH.Text = temp.ToString();
+            teMaKH.Text = temp.MaKH.ToString();
             teHoTenKH.Text = temp.HoTenKH;
             teDiaChi.Text = temp.DiaChi;
             teDienThoai.Text = temp.DienThoai;

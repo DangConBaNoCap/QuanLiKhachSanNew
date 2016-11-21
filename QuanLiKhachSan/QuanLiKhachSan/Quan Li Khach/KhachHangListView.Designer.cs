@@ -42,8 +42,8 @@
             this.DiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CMND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.CMND = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcListKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -185,6 +185,17 @@
             this.GioiTinh.VisibleIndex = 2;
             this.GioiTinh.Width = 121;
             // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemComboBox1.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
             // CMND
             // 
             this.CMND.Caption = "CMND";
@@ -193,16 +204,6 @@
             this.CMND.Visible = true;
             this.CMND.VisibleIndex = 5;
             this.CMND.Width = 179;
-            // 
-            // repositoryItemComboBox1
-            // 
-            this.repositoryItemComboBox1.AutoHeight = false;
-            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
             // KhachHangListView
             // 
@@ -213,8 +214,8 @@
             this.Controls.Add(this.ribbonControl1);
             this.Name = "KhachHangListView";
             this.Ribbon = this.ribbonControl1;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách Hàng";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcListKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
