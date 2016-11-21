@@ -20,7 +20,15 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
-
+        public static DataTable LoadTenPhong(string IdPhong)
+        {
+            string sTruyVan = "Select LoaiPhong From Phong a,LoaiPhong b where a.MaLoaiPhong=b.MaLoaiPhong and a.MaPhong= ";
+            sTruyVan += IdPhong;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static bool Them(LoaiPhong_DTO LP)
         {
             try

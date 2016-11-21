@@ -22,12 +22,14 @@ namespace DTO
             get { return _MaLoaiPhong; }
             set { _MaLoaiPhong = value; }
         }
-        private string _TinhTrang;
+        private int _TinhTrang;
 
-        public string TinhTrang
+        public int TinhTrang
         {
             get { return _TinhTrang; }
             set { _TinhTrang = value; }
         }
+
+    
     }
 }
