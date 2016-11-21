@@ -42,7 +42,7 @@ namespace DAO
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Update DichVu set TenDV= N'{0}',GiaDV='{1}' where MaDV='{1}'",DV.TenDV,DV.GiaDV,DV.MaDV);
+                string sTruyVan = string.Format("Update DichVu set TenDV= N'{0}',GiaDV='{1}' where MaDV='{2}'",DV.TenDV,DV.GiaDV,DV.MaDV);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
