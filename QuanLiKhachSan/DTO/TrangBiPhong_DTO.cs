@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class TrangBiPhong_DTO
+   public class TrangBiPhong_DTO
     {
         private int _MaLoaiPhong;
 

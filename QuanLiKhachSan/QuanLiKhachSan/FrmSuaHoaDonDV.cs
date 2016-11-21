@@ -111,9 +111,11 @@ namespace QuanLiKhachSan
             selectItem = lsvDSDichVuPhong.SelectedItems[0];
             txtTenDV.Text = selectItem.SubItems[0].Text;
             txtSoLuong.Text = selectItem.SubItems[1].Text;
+            txtDonGia.Text = selectItem.SubItems[2].Text;
             cboNhanVien.SelectedValue = selectItem.SubItems[5].Text;
             txtTenDV.ReadOnly = true;
             txtSoLuong.ReadOnly = true;
+            txtDonGia.ReadOnly = true;
         }
 
      

@@ -20,7 +20,13 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
-
+        public static int LayIDPhieuMoiNhat()
+        {
+            string sTruyVan = "select ID = max(MaHD) from ThuePhong";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
         public static bool Them(ThuePhong_DTO TP)
         {
             try

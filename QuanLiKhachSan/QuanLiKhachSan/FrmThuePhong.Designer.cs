@@ -362,6 +362,7 @@
             this.btnLuu.Size = new System.Drawing.Size(145, 30);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.ToolTip = "Lưu chỉnh sửa";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -373,7 +374,8 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 30);
             this.btnXoa.TabIndex = 2;
-            this.btnXoa.ToolTip = "Xóa thực đơn";
+            this.btnXoa.ToolTip = "Xóa dịch vụ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSuaThucDonChon
             // 
@@ -385,7 +387,7 @@
             this.btnSuaThucDonChon.Name = "btnSuaThucDonChon";
             this.btnSuaThucDonChon.Size = new System.Drawing.Size(149, 30);
             this.btnSuaThucDonChon.TabIndex = 1;
-            this.btnSuaThucDonChon.ToolTip = "Sửa thực đơn";
+            this.btnSuaThucDonChon.ToolTip = "Sửa dịch vụ";
             this.btnSuaThucDonChon.Click += new System.EventHandler(this.btnSuaThucDonChon_Click);
             // 
             // panel1

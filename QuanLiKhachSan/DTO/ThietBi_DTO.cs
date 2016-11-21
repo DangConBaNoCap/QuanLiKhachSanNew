@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ThietBi_DTO
+   public class ThietBi_DTO
     {
         private int _MaTB;
 

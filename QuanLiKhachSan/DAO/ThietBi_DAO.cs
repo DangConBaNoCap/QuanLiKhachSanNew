@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 using DTO;
 namespace DAO
 {
-   public class ThietBi_DAO
+    public class ThietBi_DAO
     {
         public static SqlConnection con;
 
         public static DataTable LoadDuLieu()
         {
-            string sTruyVan = "Select * From ThietBi";
+            string sTruyVan = "Select * From DichVu";
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
             DataProvider.DongKetNoi(con);
             return dt;
         }
 
-        public static bool Them(ThietBi_DTO KH)
+        public static bool Them(DichVu_DTO DV)
         {
             try
             {
-                string sTruyVan = string.Format("Insert into ThietBi(TenThietBi,GiaTB) values(N'{0}','{1}')", KH.TenThietBi,KH.GiaTB);
+                string sTruyVan = string.Format("Insert into DichVu(TenDV,GiaDV) values(N'{0}','{1}')", DV.TenDV, DV.GiaDV);
                 con = DataProvider.KetNoi();
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
@@ -37,12 +35,12 @@ namespace DAO
             }
         }
 
-        public static bool Sua(ThietBi_DTO KH)
+        public static bool Sua(DichVu_DTO DV)
         {
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Update ThietBi set TenThietBi= N'{0}',GiaTB='{1}' where MaTB='{5}'", KH.TenThietBi,KH.GiaTB,KH.MaTB);
+                string sTruyVan = string.Format("Update DichVu set TenDV= N'{0}',GiaDV='{1}' where MaDV='{1}'", DV.TenDV, DV.GiaDV, DV.MaDV);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
@@ -53,12 +51,12 @@ namespace DAO
             }
         }
 
-        public static bool Xoa(ThietBi_DTO KH)
+        public static bool Xoa(DichVu_DTO DV)
         {
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Delete From ThietBi  where MaTB = '{0}'", KH.MaTB);
+                string sTruyVan = string.Format("Delete From  DichVu  where MaDV = '{0}'", DV.MaDV);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
