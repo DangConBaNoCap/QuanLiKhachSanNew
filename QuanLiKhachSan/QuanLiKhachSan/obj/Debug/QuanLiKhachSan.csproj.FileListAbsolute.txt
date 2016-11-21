@@ -24,3 +24,7 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhach
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmDangNhap.resources
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Properties.Resources.resources
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csproj.GenerateResource.Cache
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmChinh.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmDoiMatKhau.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe.licenses
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThemTaiKhoan.resources
