@@ -32,7 +32,7 @@ namespace DAO
         public static DataTable LayDSDichVuPhong(int IDPhong)
         {
             DataTable dt = new DataTable();
-            string sTruyVan = string.Format("select  c.MaDV,c.TenDV,b.SoLuong,c.GiaDV,c.GiaDV*b.SoLuong ThanhTien from ChiTietThuePhong a,DichVu c,SuDungDV b  where a.MaPhong = '{0}' and a.MaHD = b.MaHD and b.MaDV =c.MaDV", IDPhong);
+            string sTruyVan = string.Format("select  c.MaDV,c.TenDV,b.SoLuong,c.GiaDV,c.GiaDV*b.SoLuong ThanhTien,b.MaNV from ChiTietThuePhong a,DichVu c,SuDungDV b  where a.MaPhong = '{0}' and a.MaHD = b.MaHD and b.MaDV =c.MaDV", IDPhong);
             con = DataProvider.KetNoi();
             dt = DataProvider.LayDataTable(sTruyVan, con);
             DataProvider.DongKetNoi(con);

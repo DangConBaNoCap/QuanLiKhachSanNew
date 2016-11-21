@@ -20,6 +20,13 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LayDSPhongTheoHD(int idYeuCau)
+        {
+            string sTruyVan = string.Format("select Phong from Phong a,ChiTietThuePhong b where b.MaHD = '{0}' and b.MaPhong=a.MaPhong ", idYeuCau);
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            return dt;
+        }
 
         public static bool Them(ChiTietThuePhong_DTO CTTP)
         {

@@ -67,11 +67,23 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSuaHoaDonDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaHoaDonDV.Designer.cs">
+      <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmThemTaiKhoan.Designer.cs">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThuePhong.Designer.cs">
+      <DependentUpon>FrmThuePhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +96,14 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaHoaDonDV.resx">
+      <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmThemTaiKhoan.resx">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThuePhong.resx">
+      <DependentUpon>FrmThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

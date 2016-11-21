@@ -28,3 +28,5 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhach
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmDoiMatKhau.resources
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe.licenses
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThemTaiKhoan.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaHoaDonDV.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThuePhong.resources

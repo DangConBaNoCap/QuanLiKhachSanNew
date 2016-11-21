@@ -400,6 +400,7 @@
             this.btnThuePhong.Size = new System.Drawing.Size(141, 36);
             this.btnThuePhong.TabIndex = 0;
             this.btnThuePhong.ToolTip = "Thuê phòng";
+            this.btnThuePhong.Click += new System.EventHandler(this.btnThuePhong_Click);
             // 
             // groupBox1
             // 

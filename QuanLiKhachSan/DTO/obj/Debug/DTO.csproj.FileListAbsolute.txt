@@ -3,3 +3,8 @@ c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DTO\bin\
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DTO\obj\Debug\DTO.dll
 c:\users\ha kentty\documents\visual studio 2013\Projects\QuanLiKhachSan\DTO\obj\Debug\DTO.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\bin\Debug\DTO.dll
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\bin\Debug\DTO.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.dll
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.pdb

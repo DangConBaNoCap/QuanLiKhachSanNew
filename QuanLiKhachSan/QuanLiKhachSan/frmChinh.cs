@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using DTO;
 namespace QuanLiKhachSan
 {
     public partial class frmChinh : Form
@@ -127,6 +128,60 @@ namespace QuanLiKhachSan
             dgvDSDichVu.Columns["SoLuong"].HeaderText = "Số lượng";
             dgvDSDichVu.Columns["GiaDV"].HeaderText = "Đơn giá";
             dgvDSDichVu.Columns["ThanhTien"].HeaderText = "Thành Tiền";
+        }
+
+        private void btnThemDV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTinhTrang.Text == "Phòng trống")
+                {
+                    MessageBox.Show("Phòng không có khách");
+                    return;
+                }
+                FrmSuaHoaDonDV frm = new FrmSuaHoaDonDV(int.Parse(txtPhongSo.Text), int.Parse(txtIDyeuCau.Text));
+                frm.ShowDialog();
+                LayDSDichVuPhong(int.Parse(txtPhongSo.Text));
+            }
+            catch
+            {
+                MessageBox.Show("Bạn chưa chọn phòng");
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (txtTinhTrang.Text == "Đã đặt")
+                {
+                    DataTable dt = ChiTietThuePhong_DAO.LayDSPhongTheoHD(int.Parse(txtIDyeuCau.Text));
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Phong_DTO ba = new Phong_DTO();
+                        ba.MaPhong = int.Parse(dt.Rows[i][0].ToString());
+                        ba.MaLoaiPhong = int.Parse(dt.Rows[i][1].ToString());
+                        ba.TinhTrang = 1;
+                        //ba.IDYeuCau = int.Parse(dt.Rows[i][2].ToString());
+                        Phong_DAO.Sua(ba);
+                    }
+                    lsvPhong.Clear();
+                    LoadDSPhong();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi");
+            }
+        }
+
+        private void btnThuePhong_Click(object sender, EventArgs e)
+        {
+            FrmThuePhong frm = new FrmThuePhong();
+            frm.ShowDialog();
+            lsvPhong.Clear();
+            LoadDSPhong();
         }
 
     }
