@@ -12,3 +12,10 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Deb
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DAO.dll
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DAO.pdb
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DTO.dll
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DAO\bin\Debug\DTO.pdb
