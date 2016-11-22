@@ -123,75 +123,63 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiKhachSan\frmChinh.cs">
+    <Compile Include="Quan Li Khach\KhachHangEditView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Quan Li Khach\KhachHangEditView.Designer.cs">
+      <DependentUpon>KhachHangEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan Li Khach\KhachHangListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan Li Khach\KhachHangListView.Designer.cs">
+      <DependentUpon>KhachHangListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiKhachSan\frmChinh.cs" />
     <Compile Include="QuanLiKhachSan\frmChinh.Designer.cs">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmChonPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmChonPhong.cs" />
     <Compile Include="QuanLiKhachSan\FrmChonPhong.Designer.cs">
       <DependentUpon>FrmChonPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\frmDangNhap.cs" />
     <Compile Include="QuanLiKhachSan\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmDoiMatKhau.cs" />
     <Compile Include="QuanLiKhachSan\FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmQuanLiPhong.cs" />
     <Compile Include="QuanLiKhachSan\FrmQuanLiPhong.Designer.cs">
       <DependentUpon>FrmQuanLiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiVatDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmQuanLiVatDung.cs" />
     <Compile Include="QuanLiKhachSan\FrmQuanLiVatDung.Designer.cs">
       <DependentUpon>FrmQuanLiVatDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.cs" />
     <Compile Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.Designer.cs">
       <DependentUpon>FrmSuaChiTietPhieuThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.cs" />
     <Compile Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.Designer.cs">
       <DependentUpon>FrmSuaChiTietThuePhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaHoaDonDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmSuaHoaDonDV.cs" />
     <Compile Include="QuanLiKhachSan\FrmSuaHoaDonDV.Designer.cs">
       <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaPhieuThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmSuaPhieuThue.cs" />
     <Compile Include="QuanLiKhachSan\FrmSuaPhieuThue.Designer.cs">
       <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThemTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmThemTaiKhoan.cs" />
     <Compile Include="QuanLiKhachSan\FrmThemTaiKhoan.Designer.cs">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\FrmThuePhong.cs" />
     <Compile Include="QuanLiKhachSan\FrmThuePhong.Designer.cs">
       <DependentUpon>FrmThuePhong.cs</DependentUpon>
     </Compile>
@@ -202,21 +190,7 @@
     <Compile Include="QuanLiKhachSan\Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLiKhachSan\Properties\Resources.Designer.cs" />
     <Compile Include="QuanLiKhachSan\Properties\Settings.Designer.cs" />
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.Designer.cs">
-      <DependentUpon>KhachHangEditView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.Designer.cs">
-      <DependentUpon>KhachHangListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\QuanLiThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="QuanLiKhachSan\QuanLiThuePhong.cs" />
     <Compile Include="QuanLiKhachSan\QuanLiThuePhong.Designer.cs">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </Compile>
@@ -272,6 +246,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Quan Li Khach\KhachHangEditView.resx">
+      <DependentUpon>KhachHangEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan Li Khach\KhachHangListView.resx">
+      <DependentUpon>KhachHangListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiKhachSan\frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,12 +301,6 @@
     <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Quan_Li_Khach.KhachHangListView.resources" />
     <EmbeddedResource Include="QuanLiKhachSan\Properties\licenses.licx" />
     <EmbeddedResource Include="QuanLiKhachSan\Properties\Resources.resx" />
-    <EmbeddedResource Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.resx">
-      <DependentUpon>KhachHangEditView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.resx">
-      <DependentUpon>KhachHangListView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiKhachSan\QuanLiThuePhong.resx">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -459,9 +433,9 @@
     <Content Include="QuanLiKhachSan\QuanLiKhachSan.csproj.user" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Quan Li Khach\Scripts\" />
     <Folder Include="QuanLiKhachSan\bin\Release\" />
     <Folder Include="QuanLiKhachSan\obj\Debug\TempPE\" />
-    <Folder Include="QuanLiKhachSan\Quan Li Khach\Scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
