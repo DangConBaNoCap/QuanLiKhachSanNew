@@ -37,6 +37,7 @@ namespace DAO
             }
         }
 
+
         public static bool Sua(KhachHang_DTO DV)
         {
             try
