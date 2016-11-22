@@ -68,5 +68,33 @@ namespace DAO
                 return false;
             }
         }
+
+        public static DataTable LayDuLieu()
+        {
+            string sTruyVan = "Select MaPhong,Phong.MaLoaiPhong,GiaTien,TinhTrang From Phong,LoaiPhong Where Phong.MaLoaiPhong=LoaiPhong.MaLoaiPhong";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable LayLoaiPhong(string dk)
+        {
+            string sTruyVan = "Select MaLoaiPhong,LoaiPhong,GiaTien From LoaiPhong "+dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
+        public static DataTable TimKiem(string dk)
+        {
+            string sTruyVan = "SELECT  Phong.MaPhong, Phong.TinhTrang, Phong.MaLoaiPhong, LoaiPhong.GiaTien "+
+             "FROM  Phong INNER JOIN LoaiPhong ON Phong.MaLoaiPhong = LoaiPhong.MaLoaiPhong "+dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
     }
 }
