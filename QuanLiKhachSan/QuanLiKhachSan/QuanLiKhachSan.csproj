@@ -33,10 +33,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -123,102 +127,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiKhachSan\frmChinh.cs">
+    <Compile Include="Quan Li Khach\KhachHangEditView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLiKhachSan\frmChinh.Designer.cs">
-      <DependentUpon>frmChinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmChonPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmChonPhong.Designer.cs">
-      <DependentUpon>FrmChonPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmDoiMatKhau.Designer.cs">
-      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiPhong.Designer.cs">
-      <DependentUpon>FrmQuanLiPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiVatDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmQuanLiVatDung.Designer.cs">
-      <DependentUpon>FrmQuanLiVatDung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.Designer.cs">
-      <DependentUpon>FrmSuaChiTietPhieuThue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.Designer.cs">
-      <DependentUpon>FrmSuaChiTietThuePhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaHoaDonDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaHoaDonDV.Designer.cs">
-      <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaPhieuThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmSuaPhieuThue.Designer.cs">
-      <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThemTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThemTaiKhoan.Designer.cs">
-      <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\FrmThuePhong.Designer.cs">
-      <DependentUpon>FrmThuePhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="QuanLiKhachSan\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="QuanLiKhachSan\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="QuanLiKhachSan\Program.cs" />
-    <Compile Include="QuanLiKhachSan\Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiKhachSan\Properties\Resources.Designer.cs" />
-    <Compile Include="QuanLiKhachSan\Properties\Settings.Designer.cs" />
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.Designer.cs">
+    <Compile Include="Quan Li Khach\KhachHangEditView.Designer.cs">
       <DependentUpon>KhachHangEditView.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.cs">
+    <Compile Include="Quan Li Khach\KhachHangListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.Designer.cs">
+    <Compile Include="Quan Li Khach\KhachHangListView.Designer.cs">
       <DependentUpon>KhachHangListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\QuanLiThuePhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLiKhachSan\QuanLiThuePhong.Designer.cs">
-      <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLiThuePhong.cs">
       <SubType>Form</SubType>
@@ -272,63 +191,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLiKhachSan\frmChinh.resx">
-      <DependentUpon>frmChinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmChonPhong.resx">
-      <DependentUpon>FrmChonPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmDoiMatKhau.resx">
-      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmQuanLiPhong.resx">
-      <DependentUpon>FrmQuanLiPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmQuanLiVatDung.resx">
-      <DependentUpon>FrmQuanLiVatDung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmSuaChiTietPhieuThue.resx">
-      <DependentUpon>FrmSuaChiTietPhieuThue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmSuaChiTietThuePhong.resx">
-      <DependentUpon>FrmSuaChiTietThuePhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmSuaHoaDonDV.resx">
-      <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmSuaPhieuThue.resx">
-      <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmThemTaiKhoan.resx">
-      <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\FrmThuePhong.resx">
-      <DependentUpon>FrmThuePhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmChinh.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmDangNhap.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmDoiMatKhau.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmQuanLiPhong.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmQuanLiVatDung.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaHoaDonDV.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThemTaiKhoan.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThuePhong.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Properties.Resources.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Quan_Li_Khach.KhachHangEditView.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Quan_Li_Khach.KhachHangListView.resources" />
-    <EmbeddedResource Include="QuanLiKhachSan\Properties\licenses.licx" />
-    <EmbeddedResource Include="QuanLiKhachSan\Properties\Resources.resx" />
-    <EmbeddedResource Include="QuanLiKhachSan\Quan Li Khach\KhachHangEditView.resx">
+    <EmbeddedResource Include="Quan Li Khach\KhachHangEditView.resx">
       <DependentUpon>KhachHangEditView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\Quan Li Khach\KhachHangListView.resx">
+    <EmbeddedResource Include="Quan Li Khach\KhachHangListView.resx">
       <DependentUpon>KhachHangListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiKhachSan\QuanLiThuePhong.resx">
-      <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiThuePhong.resx">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
@@ -342,15 +209,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLiKhachSan\App.config" />
-    <None Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe.config" />
-    <None Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.vshost.exe.config" />
-    <None Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.vshost.exe.manifest" />
-    <None Include="QuanLiKhachSan\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="QuanLiKhachSan\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csproj.GenerateResource.Cache" />
-    <None Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csprojResolveAssemblyReference.cache" />
-    <None Include="QuanLiKhachSan\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -366,102 +224,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QuanLiKhachSan\bin\Debug\DAO.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DAO.pdb" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Data.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Data.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Office.v14.2.Core.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Office.v14.2.Core.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Printing.v14.2.Core.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Printing.v14.2.Core.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.RichEdit.v14.2.Core.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Utils.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.Utils.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraBars.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraBars.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraEditors.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraEditors.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraGrid.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraGrid.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraLayout.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraLayout.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraNavBar.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraNavBar.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraPrinting.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraPrinting.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraTreeList.v14.2.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DevExpress.XtraTreeList.v14.2.xml" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.Data.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.Office.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.RichEdit.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.Sparkline.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraGrid.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraNavBar.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraPrinting.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DTO.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\DTO.pdb" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.Data.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.Office.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.RichEdit.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.Sparkline.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraEditors.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraGrid.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraNavBar.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraPrinting.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\es\DevExpress.XtraTreeList.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.RichEdit.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.Sparkline.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.Utils.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraEditors.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraGrid.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraNavBar.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraPrinting.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ja\DevExpress.XtraTreeList.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe" />
-    <Content Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.pdb" />
-    <Content Include="QuanLiKhachSan\bin\Debug\QuanLiKhachSan.vshost.exe" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.Printing.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.RichEdit.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.Sparkline.v14.2.Core.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.Utils.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraEditors.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraGrid.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraNavBar.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraPrinting.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\bin\Debug\ru\DevExpress.XtraTreeList.v14.2.resources.dll" />
-    <Content Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csproj.FileListAbsolute.txt" />
-    <Content Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe" />
-    <Content Include="QuanLiKhachSan\obj\Debug\quanlikhachsan.exe.licenses" />
-    <Content Include="QuanLiKhachSan\obj\Debug\QuanLiKhachSan.pdb" />
-    <Content Include="QuanLiKhachSan\QuanLiKhachSan.csproj" />
-    <Content Include="QuanLiKhachSan\QuanLiKhachSan.csproj.user" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="QuanLiKhachSan\bin\Release\" />
-    <Folder Include="QuanLiKhachSan\obj\Debug\TempPE\" />
-    <Folder Include="QuanLiKhachSan\Quan Li Khach\Scripts\" />
+    <Folder Include="Quan Li Khach\Scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
