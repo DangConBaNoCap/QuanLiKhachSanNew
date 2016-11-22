@@ -145,6 +145,12 @@
     <Compile Include="QuanLiThuePhong.Designer.cs">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thanh Toan\ThanhToanView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thanh Toan\ThanhToanView.Designer.cs">
+      <DependentUpon>ThanhToanView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiThuePhong.resx">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thanh Toan\ThanhToanView.resx">
+      <DependentUpon>ThanhToanView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
