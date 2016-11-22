@@ -33,9 +33,25 @@ namespace QuanLiKhachSan
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ListViewItem lvi = new ListViewItem("Phòng " + dt.Rows[i][0].ToString(), int.Parse(dt.Rows[i][2].ToString())); // 0--idban,3--trang thai
+                if (int.Parse(dt.Rows[i][2].ToString())==0)
+                {
+                    lvi.BackColor = Color.Chartreuse;
+                }
+                else
+                {
+                          if (int.Parse(dt.Rows[i][2].ToString())==1)
+                          {
+                              lvi.BackColor = Color.HotPink;
+                          }
+                          else
+                          {
+                              lvi.BackColor = Color.Gold;
+                          }
+                }
                 lsvPhong.Items.Add(lvi);
+                
             }
-        }
+              }
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmDoiMatKhau _frmDoiMK = new FrmDoiMatKhau();
@@ -182,6 +198,11 @@ namespace QuanLiKhachSan
             frm.ShowDialog();
             lsvPhong.Clear();
             LoadDSPhong();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

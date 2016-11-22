@@ -193,6 +193,7 @@ namespace QuanLiKhachSan
         {
       
             lsvDSDichVuPhong.SelectedItems[0].SubItems[1].Text = txtSoLuong.Text;
+            lsvDSDichVuPhong.SelectedItems[0].SubItems[3].Text = (int.Parse(txtSoLuong.Text) * int.Parse(lsvDSDichVuPhong.SelectedItems[0].SubItems[2].Text)).ToString();
             txtSoLuong.ReadOnly = true;
             SuaDichVu(lsvDSDichVuPhong.SelectedItems[0]);
         }

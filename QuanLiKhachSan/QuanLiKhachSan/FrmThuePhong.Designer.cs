@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThuePhong));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboNhanVien = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.cboKH = new System.Windows.Forms.ComboBox();
+            this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.btnThemPhong = new DevExpress.XtraEditors.SimpleButton();
+            this.cboPhong = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.deThoiGian = new DevExpress.XtraEditors.DateEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnThemPhong = new DevExpress.XtraEditors.SimpleButton();
-            this.cboPhong = new System.Windows.Forms.ComboBox();
-            this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.cboKH = new System.Windows.Forms.ComboBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.cboNhanVien = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -73,6 +73,7 @@
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimDichVu = new System.Windows.Forms.TextBox();
+            this.btnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGian.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGian.Properties)).BeginInit();
@@ -88,6 +89,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHoanThanh);
             this.groupBox1.Controls.Add(this.cboLoaiPhong);
             this.groupBox1.Controls.Add(this.btnThemPhong);
             this.groupBox1.Controls.Add(this.cboPhong);
@@ -109,53 +111,53 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // cboNhanVien
+            // cboLoaiPhong
             // 
-            this.cboNhanVien.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNhanVien.FormattingEnabled = true;
-            this.cboNhanVien.Location = new System.Drawing.Point(115, 58);
-            this.cboNhanVien.Name = "cboNhanVien";
-            this.cboNhanVien.Size = new System.Drawing.Size(157, 23);
-            this.cboNhanVien.TabIndex = 25;
+            this.cboLoaiPhong.FormattingEnabled = true;
+            this.cboLoaiPhong.Location = new System.Drawing.Point(721, 18);
+            this.cboLoaiPhong.Name = "cboLoaiPhong";
+            this.cboLoaiPhong.Size = new System.Drawing.Size(157, 21);
+            this.cboLoaiPhong.TabIndex = 40;
             // 
-            // label5
+            // btnThemPhong
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 15);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Tên Nhân Viên";
+            this.btnThemPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnThemPhong.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhong.Image")));
+            this.btnThemPhong.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnThemPhong.Location = new System.Drawing.Point(840, 47);
+            this.btnThemPhong.Name = "btnThemPhong";
+            this.btnThemPhong.Size = new System.Drawing.Size(38, 26);
+            this.btnThemPhong.TabIndex = 39;
+            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
             // 
-            // label2
+            // cboPhong
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 15);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Tên Khách Hàng";
+            this.cboPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPhong.FormattingEnabled = true;
+            this.cboPhong.Location = new System.Drawing.Point(721, 52);
+            this.cboPhong.Name = "cboPhong";
+            this.cboPhong.Size = new System.Drawing.Size(113, 21);
+            this.cboPhong.TabIndex = 38;
             // 
-            // simpleButton1
+            // label3
             // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(278, 15);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(47, 26);
-            this.simpleButton1.TabIndex = 30;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(636, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Phòng Số";
             // 
-            // cboKH
+            // label1
             // 
-            this.cboKH.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboKH.FormattingEnabled = true;
-            this.cboKH.Location = new System.Drawing.Point(115, 15);
-            this.cboKH.Name = "cboKH";
-            this.cboKH.Size = new System.Drawing.Size(157, 23);
-            this.cboKH.TabIndex = 31;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(636, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Loại Phòng";
             // 
             // label10
             // 
@@ -173,8 +175,8 @@
             this.cboTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrangThai.FormattingEnabled = true;
             this.cboTrangThai.Items.AddRange(new object[] {
-            "Gọi món",
-            "Đặt món"});
+            "Thuê phòng",
+            "Đặt Phòng"});
             this.cboTrangThai.Location = new System.Drawing.Point(438, 16);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(146, 24);
@@ -206,52 +208,53 @@
             this.deThoiGian.Size = new System.Drawing.Size(146, 22);
             this.deThoiGian.TabIndex = 34;
             // 
-            // label1
+            // cboKH
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(636, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Loại Phòng";
+            this.cboKH.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboKH.FormattingEnabled = true;
+            this.cboKH.Location = new System.Drawing.Point(115, 15);
+            this.cboKH.Name = "cboKH";
+            this.cboKH.Size = new System.Drawing.Size(157, 23);
+            this.cboKH.TabIndex = 31;
             // 
-            // label3
+            // simpleButton1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(636, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 15);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Phòng Số";
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(278, 13);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(47, 34);
+            this.simpleButton1.TabIndex = 30;
             // 
-            // btnThemPhong
+            // cboNhanVien
             // 
-            this.btnThemPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnThemPhong.Image = ((System.Drawing.Image)(resources.GetObject("btnThemPhong.Image")));
-            this.btnThemPhong.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnThemPhong.Location = new System.Drawing.Point(840, 47);
-            this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(38, 26);
-            this.btnThemPhong.TabIndex = 39;
+            this.cboNhanVien.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNhanVien.FormattingEnabled = true;
+            this.cboNhanVien.Location = new System.Drawing.Point(115, 58);
+            this.cboNhanVien.Name = "cboNhanVien";
+            this.cboNhanVien.Size = new System.Drawing.Size(157, 23);
+            this.cboNhanVien.TabIndex = 25;
             // 
-            // cboPhong
+            // label5
             // 
-            this.cboPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPhong.FormattingEnabled = true;
-            this.cboPhong.Location = new System.Drawing.Point(721, 52);
-            this.cboPhong.Name = "cboPhong";
-            this.cboPhong.Size = new System.Drawing.Size(113, 21);
-            this.cboPhong.TabIndex = 38;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 15);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Tên Nhân Viên";
             // 
-            // cboLoaiPhong
+            // label2
             // 
-            this.cboLoaiPhong.FormattingEnabled = true;
-            this.cboLoaiPhong.Location = new System.Drawing.Point(721, 18);
-            this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(157, 21);
-            this.cboLoaiPhong.TabIndex = 40;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Tên Khách Hàng";
             // 
             // groupBox2
             // 
@@ -350,6 +353,7 @@
             this.btnHoanTat.Size = new System.Drawing.Size(149, 30);
             this.btnHoanTat.TabIndex = 4;
             this.btnHoanTat.ToolTip = "Hoàn tất ";
+            this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
             // btnLuu
             // 
@@ -548,7 +552,17 @@
             this.txtTimDichVu.Name = "txtTimDichVu";
             this.txtTimDichVu.Size = new System.Drawing.Size(339, 27);
             this.txtTimDichVu.TabIndex = 0;
-            this.txtTimDichVu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyTimKiem);
+            // 
+            // btnHoanThanh
+            // 
+            this.btnHoanThanh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnHoanThanh.Image = ((System.Drawing.Image)(resources.GetObject("btnHoanThanh.Image")));
+            this.btnHoanThanh.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnHoanThanh.Location = new System.Drawing.Point(278, 47);
+            this.btnHoanThanh.Name = "btnHoanThanh";
+            this.btnHoanThanh.Size = new System.Drawing.Size(47, 34);
+            this.btnHoanThanh.TabIndex = 41;
+            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // FrmThuePhong
             // 
@@ -560,6 +574,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmThuePhong";
             this.Text = "FrmThuePhong";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_FormClosing);
             this.Load += new System.EventHandler(this.FrmThuePhong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -625,5 +640,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTimKiem;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.TextBox txtTimDichVu;
+        private DevExpress.XtraEditors.SimpleButton btnHoanThanh;
     }
 }

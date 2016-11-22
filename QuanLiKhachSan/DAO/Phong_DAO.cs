@@ -20,6 +20,23 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieuPhongTrong()
+        {
+            string sTruyVan = "Select * From Phong where TinhTrang=0";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable LoadDuLieuTheoLoaiPhong(string MaLP)
+        {
+            string sTruyVan = "Select * From Phong where MaLoaiPhong=";
+            sTruyVan += MaLP;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LayThongTinPhong(int IDPhong)
         {
             DataTable dt = new DataTable();
@@ -54,6 +71,21 @@ namespace DAO
             }
         }
 
+        public static bool SuaPhong(Phong_DTO P)
+        {
+            try
+            {
+                con = DataProvider.KetNoi();
+                string sTruyVan = string.Format("Update Phong set TinhTrang='{0}' where MaPhong='{1}'", P.TinhTrang, P.MaPhong);
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static bool Sua(Phong_DTO P)
         {
             try
@@ -85,5 +117,33 @@ namespace DAO
                 return false;
             }
         }
+
+        public static DataTable LayDuLieu()
+        {
+            string sTruyVan = "Select MaPhong,Phong.MaLoaiPhong,GiaTien,TinhTrang From Phong,LoaiPhong Where Phong.MaLoaiPhong=LoaiPhong.MaLoaiPhong";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable LayLoaiPhong(string dk)
+        {
+            string sTruyVan = "Select MaLoaiPhong,LoaiPhong,GiaTien From LoaiPhong "+dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
+        public static DataTable TimKiem(string dk)
+        {
+            string sTruyVan = "SELECT  Phong.MaPhong, Phong.TinhTrang, Phong.MaLoaiPhong, LoaiPhong.GiaTien "+
+             "FROM  Phong INNER JOIN LoaiPhong ON Phong.MaLoaiPhong = LoaiPhong.MaLoaiPhong "+dk;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
     }
 }

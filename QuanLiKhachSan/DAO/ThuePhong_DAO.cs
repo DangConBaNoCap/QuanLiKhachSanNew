@@ -20,6 +20,23 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieuTheoMa(string MaHD)
+        {
+            string sTruyVan = "Select * From ThuePhong where MaHD=";
+            sTruyVan += MaHD;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable LoadChiTiet()
+        {
+            string sTruyVan = "Select a.MaHD,c.HoTenNV,a.NgayThue,b.HoTenKH From ThuePhong a,KhachHang b,NhanVien c where a.MaKH=b.MaKH and a.MaNV=c.MaNV";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static int LayIDPhieuMoiNhat()
         {
             string sTruyVan = "select ID = max(MaHD) from ThuePhong";
