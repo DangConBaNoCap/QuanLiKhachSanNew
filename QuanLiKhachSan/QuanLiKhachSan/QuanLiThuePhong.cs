@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using DTO;
 namespace QuanLiKhachSan
 {
     public partial class QuanLiThuePhong : Form
@@ -86,6 +87,38 @@ namespace QuanLiKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show("Không có dữ liệu", "THÔNG BÁO", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnReLoad_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            grdThuePhong.DataSource = ThuePhong_DAO.LoadChiTiet();
+        }
+
+        private void btnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gridView1.ShowPrintPreview();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Xóa Chi Tiết
+            try
+            {
+                ChiTietThuePhong_DTO ct = new ChiTietThuePhong_DTO();
+                ct.MaHD = int.Parse(MaHD);
+                ct.MaPhong = int.Parse(MaPhong);
+                ChiTietThuePhong_DAO.Xoa(ct);
+                grdSuDungDV.DataSource = SuDungDV_DAO.LoadDuLieuTheoMa(MaHD);
+            }
+            catch
+            {
+                MessageBox.Show("Bạn chưa chọn phiếu thuê!");
             }
         }
     }

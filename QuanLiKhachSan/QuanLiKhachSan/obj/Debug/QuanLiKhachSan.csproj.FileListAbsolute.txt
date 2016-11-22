@@ -33,3 +33,35 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhach
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe.config
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmChonPhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.QuanLiThuePhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaPhieuThue.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaChiTietPhieuThue.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe.config
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.pdb
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\QuanLiKhachSan.pdb
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\DAO.dll
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\DTO.dll
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\DAO.pdb
+E:\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\DTO.pdb
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csprojResolveAssemblyReference.cache
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmChinh.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmChonPhong.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.frmDangNhap.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmDoiMatKhau.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaChiTietPhieuThue.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaHoaDonDV.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaPhieuThue.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThemTaiKhoan.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmThuePhong.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Properties.Resources.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.QuanLiThuePhong.resources
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.csproj.GenerateResource.Cache
+E:\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe.licenses
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmQuanLiPhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmQuanLiVatDung.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaChiTietThuePhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Quan_Li_Khach.KhachHangEditView.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.Quan_Li_Khach.KhachHangListView.resources

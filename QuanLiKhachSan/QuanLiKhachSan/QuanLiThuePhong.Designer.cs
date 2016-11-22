@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLiThuePhong));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
@@ -133,6 +133,7 @@
             this.btnXoa.Id = 4;
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
             // btnHuy
             // 
@@ -157,6 +158,7 @@
             this.btnReLoad.Id = 7;
             this.btnReLoad.Name = "btnReLoad";
             this.btnReLoad.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnReLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReLoad_ItemClick);
             // 
             // btnQuaylai
             // 
@@ -194,6 +196,7 @@
             this.btnIn.Id = 14;
             this.btnIn.Name = "btnIn";
             this.btnIn.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIn_ItemClick);
             // 
             // skinRibbonGalleryBarItem1
             // 
@@ -226,6 +229,7 @@
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -256,7 +260,6 @@
             // 
             // grchinhsua
             // 
-            this.grchinhsua.ItemLinks.Add(this.btnXoa);
             this.grchinhsua.ItemLinks.Add(this.barButtonItem1);
             this.grchinhsua.Name = "grchinhsua";
             this.grchinhsua.Text = "Edit Phiếu Thuê";
@@ -265,7 +268,6 @@
             // 
             this.grDieuHuong.AllowTextClipping = false;
             this.grDieuHuong.ItemLinks.Add(this.btnReLoad);
-            this.grDieuHuong.ItemLinks.Add(this.btnQuaylai);
             this.grDieuHuong.Name = "grDieuHuong";
             this.grDieuHuong.Text = "Điều hướng bản ghi ";
             // 
@@ -286,7 +288,6 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Dịch Vụ";
             // 
@@ -327,9 +328,9 @@
             // 
             // grdSuDungDV
             // 
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grdSuDungDV.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.grdSuDungDV.Location = new System.Drawing.Point(380, 325);
             this.grdSuDungDV.MainView = this.gridView3;
             this.grdSuDungDV.MenuManager = this.ribbonControl1;
