@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThuePhong));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
             this.cboLoaiPhong = new System.Windows.Forms.ComboBox();
             this.btnThemPhong = new DevExpress.XtraEditors.SimpleButton();
             this.cboPhong = new System.Windows.Forms.ComboBox();
@@ -73,7 +74,6 @@
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimDichVu = new System.Windows.Forms.TextBox();
-            this.btnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGian.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGian.Properties)).BeginInit();
@@ -110,6 +110,17 @@
             this.groupBox1.Size = new System.Drawing.Size(929, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnHoanThanh
+            // 
+            this.btnHoanThanh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnHoanThanh.Image = ((System.Drawing.Image)(resources.GetObject("btnHoanThanh.Image")));
+            this.btnHoanThanh.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnHoanThanh.Location = new System.Drawing.Point(278, 47);
+            this.btnHoanThanh.Name = "btnHoanThanh";
+            this.btnHoanThanh.Size = new System.Drawing.Size(47, 34);
+            this.btnHoanThanh.TabIndex = 41;
+            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // cboLoaiPhong
             // 
@@ -226,6 +237,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(47, 34);
             this.simpleButton1.TabIndex = 30;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // cboNhanVien
             // 
@@ -552,17 +564,6 @@
             this.txtTimDichVu.Name = "txtTimDichVu";
             this.txtTimDichVu.Size = new System.Drawing.Size(339, 27);
             this.txtTimDichVu.TabIndex = 0;
-            // 
-            // btnHoanThanh
-            // 
-            this.btnHoanThanh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnHoanThanh.Image = ((System.Drawing.Image)(resources.GetObject("btnHoanThanh.Image")));
-            this.btnHoanThanh.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnHoanThanh.Location = new System.Drawing.Point(278, 47);
-            this.btnHoanThanh.Name = "btnHoanThanh";
-            this.btnHoanThanh.Size = new System.Drawing.Size(47, 34);
-            this.btnHoanThanh.TabIndex = 41;
-            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // FrmThuePhong
             // 

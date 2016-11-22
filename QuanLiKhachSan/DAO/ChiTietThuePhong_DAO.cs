@@ -20,6 +20,16 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieu1(string MaHD, string MaPhong)
+        {
+            string sTruyVan = "Select * From ChiTietThuePhong where MaHD=";
+            sTruyVan += MaHD;
+            sTruyVan += " and MaPhong=" + MaPhong;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LayHDTheoMa(string MaHD)
         {
             string sTruyVan = "Select * From ChiTietThuePhong where MaHD=";

@@ -27,13 +27,13 @@ namespace QuanLiKhachSan
         private void FrmThemTaiKhoan_Load(object sender, EventArgs e)
         {
             cboNhanVien.DataSource = NhanVien_DAO.LoadDuLieu();
-            cboNhanVien.ValueMember = "IDNhanVien";
-            cboNhanVien.DisplayMember = "HoTen";
+            cboNhanVien.ValueMember = "MaNV";
+            cboNhanVien.DisplayMember = "HoTenNV";
         }
         public bool CheckTaiKhoan()
         {
             SqlConnection con = DataProvider.KetNoi();
-            string s = string.Format("Select * from tblTaiKhoan where TenDangNhap = '{0}'", txtTenDangNhap.Text);
+            string s = string.Format("Select * from TaiKhoan where TaiKhoan = '{0}'", txtTenDangNhap.Text);
             SqlDataAdapter sda = new SqlDataAdapter(s, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -63,7 +63,7 @@ namespace QuanLiKhachSan
                 return;
             }
             SqlConnection con = DataProvider.KetNoi();
-            string s = string.Format("Insert tblTaiKhoan(TenDangNhap,MatKhau,IDCapDo,IDNhanVien) values('{0}','{1}','{2}','{3}')", txtTenDangNhap.Text, txtMatKhau.Text, 1, cboNhanVien.SelectedValue);
+            string s = string.Format("Insert TaiKhoan(TaiKhoan,MatKhau,MaNV) values('{0}','{1}','{2}')", txtTenDangNhap.Text, txtMatKhau.Text, 1, cboNhanVien.SelectedValue);
             SqlCommand cmd = new SqlCommand(s, con);
             cmd.ExecuteNonQuery();
             con.Close();

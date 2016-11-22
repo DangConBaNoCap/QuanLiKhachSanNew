@@ -212,5 +212,11 @@ namespace QuanLiKhachSan
 
         }
 
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Quan_Li_Khach.KhachHangListView frm = new Quan_Li_Khach.KhachHangListView();
+            frm.ShowDialog();
+        }
+
     }
 }

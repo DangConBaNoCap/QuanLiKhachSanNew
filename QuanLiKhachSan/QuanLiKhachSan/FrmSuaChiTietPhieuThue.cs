@@ -15,7 +15,7 @@ namespace QuanLiKhachSan
     {
         private int MaHDon;
         private int MaPhg;
-     
+        private DateTime NgayTra;
         public FrmSuaChiTietPhieuThue(string MaHD,string MaPhong)
         {
             MaHDon = int.Parse(MaHD);
@@ -25,28 +25,27 @@ namespace QuanLiKhachSan
 
         private void FrmSuaChiTietPhieuThue_Load(object sender, EventArgs e)
         {
-            Phong_DTO p = new Phong_DTO();
-            p.MaPhong = MaPhg;
-            p.TinhTrang = 0;
-            Phong_DAO.SuaPhong(p);
+            DataTable ct = ChiTietThuePhong_DAO.LoadDuLieu1(MaHDon.ToString(), MaPhg.ToString());
+            if (ct.Rows[0][2].ToString() == "")
+            {
+                NgayTra = DateTime.Now;
+            }
+            else
+            {
+                NgayTra = DateTime.Parse(ct.Rows[0][2].ToString());
+            }
             txtMaHD.Text = MaHDon.ToString();
-            cboPhong.DataSource = Phong_DAO.LoadDuLieuPhongTrong();
-            cboPhong.DisplayMember = "MaPhong";
-            cboPhong.ValueMember = "MaPhong";
-            cboPhong.SelectedValue = MaPhg;           
-           
+            txtPhong.Text = MaPhg.ToString();
+            dtThoiGian.Value = NgayTra;
         }
 
         private void btnLUU_Click(object sender, EventArgs e)
         {
             ChiTietThuePhong_DTO tp = new ChiTietThuePhong_DTO();
             tp.MaHD = MaHDon;
-            tp.MaPhong = int.Parse(cboPhong.SelectedValue.ToString());
+            tp.MaPhong = MaPhg;
+            tp.NgayTra = dtThoiGian.Value;
             ChiTietThuePhong_DAO.Sua(tp);
-            Phong_DTO p = new Phong_DTO();
-            p.MaPhong = int.Parse(cboPhong.SelectedValue.ToString());
-            p.TinhTrang = 1;
-            Phong_DAO.Sua(p);
 
         }
 

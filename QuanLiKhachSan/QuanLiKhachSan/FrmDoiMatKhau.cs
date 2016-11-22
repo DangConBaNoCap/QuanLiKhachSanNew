@@ -49,7 +49,7 @@ namespace QuanLiKhachSan
                 return;
             }
             SqlConnection con = DataProvider.KetNoi();
-            string Scommand = string.Format("update tblTaiKhoan set MatKhau = '{0}' where TenDangNhap = '{1}'", txtMatKhauMoi.Text, txtTenTaiKhoan.Text);
+            string Scommand = string.Format("update TaiKhoan set MatKhau = '{0}' where TaiKhoan = '{1}'", txtMatKhauMoi.Text, txtTenTaiKhoan.Text);
             SqlCommand com = new SqlCommand(Scommand, con);
             com.ExecuteNonQuery();
             DataProvider.DongKetNoi(con);

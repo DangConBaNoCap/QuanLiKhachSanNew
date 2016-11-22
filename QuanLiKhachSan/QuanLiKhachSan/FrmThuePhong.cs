@@ -283,5 +283,10 @@ namespace QuanLiKhachSan
         {
             ThemPhieuThuePhong();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Quan_Li_Khach.KhachHangEditView frm = new Quan_Li_Khach.KhachHangEditView();
+        }
     }
 }

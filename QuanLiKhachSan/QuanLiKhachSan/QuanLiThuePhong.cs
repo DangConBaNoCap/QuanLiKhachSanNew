@@ -121,5 +121,22 @@ namespace QuanLiKhachSan
                 MessageBox.Show("Bạn chưa chọn phiếu thuê!");
             }
         }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Sửa dịch vụ
+            try
+            {
+
+                FrmSuaHoaDonDV frm = new FrmSuaHoaDonDV(int.Parse(MaPhong), int.Parse(MaHD));
+                frm.ShowDialog();
+                grdSuDungDV.DataSource = SuDungDV_DAO.LoadDuLieuTheoMa(MaHD);
+
+            }
+            catch
+            {
+                MessageBox.Show("Bạn chưa chọn phiếu thuê!");
+            }
+        }
     }
 }
