@@ -20,6 +20,15 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LayHDTheoMa(string MaHD)
+        {
+            string sTruyVan = "Select * From ChiTietThuePhong where MaHD=";
+            sTruyVan += MaHD;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LayDSPhongTheoHD(int idYeuCau)
         {
             string sTruyVan = string.Format("select Phong from Phong a,ChiTietThuePhong b where b.MaHD = '{0}' and b.MaPhong=a.MaPhong ", idYeuCau);
@@ -44,6 +53,21 @@ namespace DAO
             }
         }
 
+        public static bool Them1(ChiTietThuePhong_DTO CTTP)
+        {
+            try
+            {
+                string sTruyVan = string.Format("Insert into ChiTietThuePhong(MaHD,MaPhong) values('{0}','{1}')", CTTP.MaHD, CTTP.MaPhong);
+                con = DataProvider.KetNoi();
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static bool Sua(ChiTietThuePhong_DTO CTTP)
         {
             try

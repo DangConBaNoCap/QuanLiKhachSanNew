@@ -45,7 +45,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -66,7 +65,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDSDichVu = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemDV = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
@@ -233,18 +231,11 @@
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3,
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
             this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản lí ";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Nhân Viên";
             // 
             // ribbonPageGroup4
             // 
@@ -311,6 +302,7 @@
             // lsvPhong
             // 
             this.lsvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvPhong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsvPhong.Location = new System.Drawing.Point(0, 0);
             this.lsvPhong.MultiSelect = false;
             this.lsvPhong.Name = "lsvPhong";
@@ -333,7 +325,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Yellow;
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(152, 2);
@@ -345,7 +337,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.BackColor = System.Drawing.Color.HotPink;
             this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(77, 2);
@@ -357,7 +349,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.BackColor = System.Drawing.Color.Chartreuse;
             this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(2, 2);
@@ -388,6 +380,7 @@
             this.btnThanhToan.Size = new System.Drawing.Size(154, 36);
             this.btnThanhToan.TabIndex = 1;
             this.btnThanhToan.ToolTip = "Thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnThuePhong
             // 
@@ -450,26 +443,12 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnLamMoi);
             this.panel4.Controls.Add(this.btnThemDV);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 16);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(820, 35);
             this.panel4.TabIndex = 0;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnLamMoi.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
-            this.btnLamMoi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnLamMoi.Location = new System.Drawing.Point(75, 0);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 35);
-            this.btnLamMoi.TabIndex = 1;
-            this.btnLamMoi.ToolTip = "Chuyển trạng thái";
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThemDV
             // 
@@ -636,7 +615,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
@@ -657,7 +635,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvDSDichVu;
         private System.Windows.Forms.Panel panel4;
-        private DevExpress.XtraEditors.SimpleButton btnLamMoi;
         private DevExpress.XtraEditors.SimpleButton btnThemDV;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtIDyeuCau;

@@ -13,7 +13,10 @@ namespace QuanLiKhachSan
 {
     public partial class FrmThuePhong : Form
     {
-        int IDYeuCau;
+        private int IDYeuCau;
+        public static string[] Phongchon;
+        public static bool loadcboPhong = false;
+        private bool KiemTra=false;
         public FrmThuePhong()
         {
             InitializeComponent();
@@ -31,9 +34,8 @@ namespace QuanLiKhachSan
             cboLoaiPhong.DataSource = LoaiPhong_DAO.LoadDuLieu();
             cboLoaiPhong.DisplayMember = "LoaiPhong";
             cboLoaiPhong.ValueMember = "MaLoaiPhong";
-            
 
-        }
+         }
         private void LoadDSDichVu()
         {
             DataTable dt = DichVu_DAO.LoadDuLieu();
@@ -57,15 +59,42 @@ namespace QuanLiKhachSan
             txtTenDV.ReadOnly = true;
             txtDonGia.ReadOnly = true;
             txtSoLuong.ReadOnly = false;
+            txtSoLuong.Text = "1";
         }
         public void ThemPhieuThuePhong()
         {
-            ThuePhong_DTO tp = new ThuePhong_DTO();           
-            tp.MaKH = int.Parse(cboKH.SelectedValue.ToString());
-            tp.MaNV = int.Parse(cboNhanVien.SelectedValue.ToString());
-            tp.NgayThue = DateTime.Now;
-            ThuePhong_DAO.Them(tp);
-            IDYeuCau = ThuePhong_DAO.LayIDPhieuMoiNhat();
+            if (KiemTra == false)
+            {
+                ThuePhong_DTO tp = new ThuePhong_DTO();
+                tp.MaKH = int.Parse(cboKH.SelectedValue.ToString());
+                tp.MaNV = int.Parse(cboNhanVien.SelectedValue.ToString());
+                tp.NgayThue = DateTime.Now;
+                ThuePhong_DAO.Them(tp);
+                IDYeuCau = ThuePhong_DAO.LayIDPhieuMoiNhat();
+                KiemTra = true;
+
+            }
+
+        }
+        private void SuaThongTinPhong()
+        {
+            ChiTietThuePhong_DTO tp = new ChiTietThuePhong_DTO();
+            tp.MaHD = IDYeuCau;
+            
+            for (int i = 0; i < cboPhong.Items.Count; i++)
+            {
+                string[] s = cboPhong.Items[i].ToString().Split(' ');
+               Phong_DTO ba = new Phong_DTO();
+                ba.MaPhong = int.Parse(s[1]);
+                tp.MaPhong = ba.MaPhong;
+               ChiTietThuePhong_DAO.Them1(tp);
+                ba.TinhTrang= 1;
+                if (cboTrangThai.Text == "Đặt phòng")
+                {
+                    ba.TinhTrang = 2;
+                }
+               Phong_DAO.SuaPhong(ba);
+            }
         }
 
         private void FrmThuePhong_Load(object sender, EventArgs e)
@@ -74,25 +103,25 @@ namespace QuanLiKhachSan
             LoadDL();
             LoadDSDichVu();
         }
-
-        private void btnThem_Click(object sender, EventArgs e)
+        private void ThemDichVuPhong()
         {
-            bool kt = false;
-            for (int i = 0; i < lsvDSDichVuPhong.Items.Count; i++)
-            {
-                if (txtTenDV.Text == lsvDSDichVuPhong.Items[i].SubItems[0].Text)
+             int ktsoluong=0;
+              int.TryParse(txtSoLuong.Text, out ktsoluong);
+                if (ktsoluong == 0)
                 {
-                    int soluong = int.Parse(lsvDSDichVuPhong.Items[i].SubItems[1].Text) + int.Parse(txtSoLuong.Text);
-                    kt = true;
-                    lsvDSDichVuPhong.Items[i].SubItems[1].Text = soluong.ToString();
-                    lsvDSDichVuPhong.Items[i].SubItems[3].Text = (soluong * int.Parse(lsvDSDichVuPhong.Items[i].SubItems[2].Text)).ToString();
-                    lsvDSDichVuPhong.Items[i].SubItems[5].Text = cboNhanVien.SelectedValue.ToString();
-                    SuaDichVu(lsvDSDichVuPhong.Items[i]);
-                }
-            }
-            if (kt == false)
+                    MessageBox.Show("Đề nghị bạn nhập lại số lượng!");
+                    return;
+                }           
+    
+            ListViewItem item1 = lsvDSDichVuPhong.FindItemWithText(txtTenDV.Text);
+            if(item1 != null)
             {
-                ListViewItem item = new ListViewItem(txtTenDV.Text);
+                int slg=int.Parse(item1.SubItems[1].Text) + int.Parse(txtSoLuong.Text);
+                item1.SubItems[1].Text = slg.ToString();
+                item1.SubItems[3].Text = (slg * int.Parse(item1.SubItems[2].Text)).ToString();
+                return;
+            }
+                 ListViewItem item = new ListViewItem(txtTenDV.Text);
                 item.SubItems.Add(txtSoLuong.Text);
                 item.SubItems.Add(txtDonGia.Text);
                 int ThanhTien = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
@@ -100,8 +129,13 @@ namespace QuanLiKhachSan
                 item.SubItems.Add(selectItem.SubItems[2].Text);//Mã dich vụ
                 item.SubItems.Add(cboNhanVien.SelectedValue.ToString());
                 lsvDSDichVuPhong.Items.Add(item);
-                ThemDichVu(item);
-            }
+                ThemDichVu(item);            
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (KiemTra == false) { MessageBox.Show("Chưa hoàn tất phần thông tin!"); return; }
+            ThemDichVuPhong();
         }
         private void lsvDSDichVuPhong_Click(object sender, EventArgs e)
         {
@@ -159,10 +193,7 @@ namespace QuanLiKhachSan
 
         private void keyTimKiem(object sender, KeyEventArgs e)
         {
-            ListViewItem i = lsvDSDichVu.FindItemWithText(txtTimDichVu.Text);
-            lsvDSDichVu.TopItem = i;
-            lsvDSDichVu.Top = 1;
-            i.BackColor = Color.Blue;
+           
         }
 
         private void btnSuaThucDonChon_Click(object sender, EventArgs e)
@@ -188,8 +219,69 @@ namespace QuanLiKhachSan
         {
 
             lsvDSDichVuPhong.SelectedItems[0].SubItems[1].Text = txtSoLuong.Text;
+            lsvDSDichVuPhong.SelectedItems[0].SubItems[3].Text = (int.Parse(txtSoLuong.Text) * int.Parse(lsvDSDichVuPhong.SelectedItems[0].SubItems[2].Text)).ToString();
             txtSoLuong.ReadOnly = true;
             SuaDichVu(lsvDSDichVuPhong.SelectedItems[0]);
+        }
+        
+        private void btnThemPhong_Click(object sender, EventArgs e)
+        {
+         FrmChonPhong  frm = new FrmChonPhong(cboLoaiPhong.SelectedValue.ToString());
+            frm.ShowDialog();
+            if (loadcboPhong == true)
+            {
+              //  cboPhong.Items.Clear();
+                for (int i = 0; i < Phongchon.Length; i++)
+                {
+                    cboPhong.Items.Add(Phongchon[i]);
+                }
+            }
+            loadcboPhong = false;
+        }
+        bool isHoanTat = false;
+        private void btnHoanTat_Click(object sender, EventArgs e)
+        {        
+            if (cboKH.Text==null)
+            {
+                MessageBox.Show("Nhập lại Khách");
+                return;
+            }
+            if (cboLoaiPhong.Text == null)
+            {
+                MessageBox.Show("Chọn Loại Phòng");
+                return;
+            }
+           
+            if (cboPhong.Items.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn Phòng");
+                return;
+            }
+            if (lsvDSDichVuPhong.Items.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn dịch vụ");
+                return;
+            }
+            isHoanTat = true;
+            SuaThongTinPhong();
+            
+            MessageBox.Show("Đã gửi yêu cầu thuê phòng");
+            this.Close();
+        }
+
+        private void frm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //if (isHoanTat == false)
+            //{
+            //    ThuePhong_DTO pyc = new ThuePhong_DTO();
+            //    pyc.MaHD = ThuePhong_DAO.LayIDPhieuMoiNhat();
+            //    ThuePhong_DAO.Xoa(pyc);
+            //}
+        }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            ThemPhieuThuePhong();
         }
     }
 }
