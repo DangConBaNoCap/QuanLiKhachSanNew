@@ -33,3 +33,7 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhach
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\bin\Debug\QuanLiKhachSan.exe.config
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.exe
 F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.pdb
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmChonPhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.QuanLiThuePhong.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaPhieuThue.resources
+C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\QuanLiKhachSan\obj\Debug\QuanLiKhachSan.FrmSuaChiTietPhieuThue.resources

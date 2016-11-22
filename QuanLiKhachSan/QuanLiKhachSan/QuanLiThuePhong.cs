@@ -81,7 +81,7 @@ namespace QuanLiKhachSan
           
             try
             {
-                MaPhong = gridView2.GetRowCellValue(gridView1.FocusedRowHandle, "MaPhong").ToString();      
+                MaPhong = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "MaPhong").ToString();      
             }
             catch (Exception ex)
             {
