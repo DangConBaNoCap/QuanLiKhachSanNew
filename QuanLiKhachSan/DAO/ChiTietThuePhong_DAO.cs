@@ -109,5 +109,20 @@ namespace DAO
                 return false;
             }
         }
+        public static bool Xoa1(ChiTietThuePhong_DTO CTTP)
+        {
+            try
+            {
+                con = DataProvider.KetNoi();
+                string sTruyVan = string.Format("Delete From  ChiTietThuePhong  where MaHD = '{0}'", CTTP.MaHD);
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

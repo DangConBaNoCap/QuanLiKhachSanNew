@@ -138,5 +138,30 @@ namespace QuanLiKhachSan
                 MessageBox.Show("Bạn chưa chọn phiếu thuê!");
             }
         }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Xóa
+                 try
+            {
+
+            SuDungDV_DTO sd = new SuDungDV_DTO();
+            sd.MaHD =int.Parse( MaHD);
+            SuDungDV_DAO.Xoa1(sd);
+            ChiTietThuePhong_DTO ct = new ChiTietThuePhong_DTO();
+            ct.MaHD = int.Parse(MaHD);
+            ChiTietThuePhong_DAO.Xoa1(ct);
+            ThuePhong_DTO tp = new ThuePhong_DTO();
+            tp.MaHD = int.Parse(MaHD);
+            ThuePhong_DAO.Xoa(tp);
+            grdThuePhong.DataSource = ThuePhong_DAO.LoadChiTiet();
+            }
+                 catch
+                 {
+                     MessageBox.Show("Bạn chưa chọn phiếu thuê!");
+                 }
+
+
+        }
     }
 }

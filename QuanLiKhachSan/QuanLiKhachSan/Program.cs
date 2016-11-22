@@ -16,7 +16,7 @@ namespace QuanLiKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLiThuePhong());
+            Application.Run(new frmDangNhap());
         }
     }
 }
