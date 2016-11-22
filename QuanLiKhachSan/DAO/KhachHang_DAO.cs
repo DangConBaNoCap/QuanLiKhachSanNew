@@ -64,8 +64,9 @@ namespace DAO
                 DataProvider.DongKetNoi(con);
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                string message = ex.Message;
                 return false;
             }
         }

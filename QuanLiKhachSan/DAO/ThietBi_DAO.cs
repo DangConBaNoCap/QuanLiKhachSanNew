@@ -4,8 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+<<<<<<< HEAD
 using System.Data;
 using System.Data.SqlClient;
+=======
+using System.Data.SqlClient;
+using System.Data;
+
+>>>>>>> fdaae2f47c2488b1cf38dc352ace20733ef4f38e
 namespace DAO
 {
     public class ThietBi_DAO
