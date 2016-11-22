@@ -55,6 +55,12 @@
     <Compile Include="frmChinh.Designer.cs">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChonPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChonPhong.Designer.cs">
+      <DependentUpon>FrmChonPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +73,41 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanLiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLiPhong.Designer.cs">
+      <DependentUpon>FrmQuanLiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLiVatDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLiVatDung.Designer.cs">
+      <DependentUpon>FrmQuanLiVatDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaChiTietPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaChiTietPhieuThue.Designer.cs">
+      <DependentUpon>FrmSuaChiTietPhieuThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaChiTietThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaChiTietThuePhong.Designer.cs">
+      <DependentUpon>FrmSuaChiTietThuePhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSuaHoaDonDV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSuaHoaDonDV.Designer.cs">
       <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaPhieuThue.Designer.cs">
+      <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThemTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -184,8 +220,17 @@
     <Compile Include="QuanLiKhachSan\QuanLiThuePhong.Designer.cs">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiThuePhong.Designer.cs">
+      <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChonPhong.resx">
+      <DependentUpon>FrmChonPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -193,8 +238,23 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLiPhong.resx">
+      <DependentUpon>FrmQuanLiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLiVatDung.resx">
+      <DependentUpon>FrmQuanLiVatDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaChiTietPhieuThue.resx">
+      <DependentUpon>FrmSuaChiTietPhieuThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaChiTietThuePhong.resx">
+      <DependentUpon>FrmSuaChiTietThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSuaHoaDonDV.resx">
       <DependentUpon>FrmSuaHoaDonDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaPhieuThue.resx">
+      <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThemTaiKhoan.resx">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
@@ -268,6 +328,9 @@
       <DependentUpon>KhachHangListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiKhachSan\QuanLiThuePhong.resx">
+      <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiThuePhong.resx">
       <DependentUpon>QuanLiThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
