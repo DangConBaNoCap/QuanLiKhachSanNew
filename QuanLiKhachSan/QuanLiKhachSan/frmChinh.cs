@@ -218,5 +218,25 @@ namespace QuanLiKhachSan
             frm.ShowDialog();
         }
 
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            QLDichVu frm = new QLDichVu();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //quản lí phòng
+
+            FrmQuanLiPhong frm = new FrmQuanLiPhong();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmQuanLiVatDung frm = new FrmQuanLiVatDung();
+            frm.ShowDialog();
+        }
+
     }
 }
