@@ -21,6 +21,15 @@ namespace DAO
             return dt;
         }
 
+        public static DataTable LoadDuLieu(string maHD)
+        {
+            string sTruyVan = "Select * From DichVu as a join SuDungDV as b on a.MaDV=b.maDV where b.MaHD='"+maHD+"'";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
         public static bool Them(DichVu_DTO DV)
         {
             try

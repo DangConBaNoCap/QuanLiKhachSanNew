@@ -20,7 +20,22 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
-
+        public static DataTable LoadDuLieu(string maKH)
+        {
+            string sTruyVan = "Select * From KhachHang where MaKH=N'"+maKH+"'";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+        public static DataTable LoadDuLieuTheoTen(string tenKH)
+        {
+            string sTruyVan = "Select * From KhachHang where HoTenKH = N'"+tenKH.TrimEnd()+"'";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static bool Them(KhachHang_DTO DV)
         {
             try

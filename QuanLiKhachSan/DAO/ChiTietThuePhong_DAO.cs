@@ -29,6 +29,15 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LayHDTheoMaPhong(string MaHD)
+        {
+            string sTruyVan = "Select * From ChiTietThuePhong where MaPhong=N'";
+            sTruyVan += MaHD+"' and NgayTra is NULL";
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LayDSPhongTheoHD(int idYeuCau)
         {
             string sTruyVan = string.Format("select Phong from Phong a,ChiTietThuePhong b where b.MaHD = '{0}' and b.MaPhong=a.MaPhong ", idYeuCau);

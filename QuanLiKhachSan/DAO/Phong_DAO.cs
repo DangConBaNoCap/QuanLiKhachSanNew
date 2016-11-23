@@ -10,8 +10,16 @@ namespace DAO
 {
     public class Phong_DAO
     {
+        
         public static SqlConnection con;
-
+        public static DataTable LoadDuLieu(string where)
+        {
+            string sTruyVan = "Select * From Phong " + where;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
         public static DataTable LoadDuLieu()
         {
             string sTruyVan = "Select * From Phong";
@@ -59,7 +67,7 @@ namespace DAO
         {
             try
             {
-                string sTruyVan = string.Format("Insert into Phong(MaLoaiPhong,TinhTrang) values('{0}','{1}')",P.MaLoaiPhong,P.TinhTrang);
+                string sTruyVan = string.Format("Insert into Phong(MaLoaiPhong,TinhTrang) values('{0}','{1}')", P.MaLoaiPhong, P.TinhTrang);
                 con = DataProvider.KetNoi();
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
@@ -91,7 +99,7 @@ namespace DAO
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Update Phong set MaLoaiPhong='{0}',TinhTrang='{1}' where MaPhong='{2}'",P.MaLoaiPhong,P.TinhTrang,P.MaPhong);
+                string sTruyVan = string.Format("Update Phong set MaLoaiPhong='{0}',TinhTrang='{1}' where MaPhong='{2}'", P.MaLoaiPhong, P.TinhTrang, P.MaPhong);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
@@ -101,7 +109,21 @@ namespace DAO
                 return false;
             }
         }
-
+        public static bool SuaTinhTrang(Phong_DTO P)
+        {
+            try
+            {
+                con = DataProvider.KetNoi();
+                string sTruyVan = string.Format("Update Phong set TinhTrang='{0}' where MaPhong='{1}'", P.TinhTrang, P.MaPhong);
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static bool Xoa(Phong_DTO P)
         {
             try
@@ -128,7 +150,7 @@ namespace DAO
         }
         public static DataTable LayLoaiPhong(string dk)
         {
-            string sTruyVan = "Select MaLoaiPhong,LoaiPhong,GiaTien From LoaiPhong "+dk;
+            string sTruyVan = "Select MaLoaiPhong,LoaiPhong,GiaTien From LoaiPhong " + dk;
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
             DataProvider.DongKetNoi(con);
@@ -137,13 +159,13 @@ namespace DAO
 
         public static DataTable TimKiem(string dk)
         {
-            string sTruyVan = "SELECT  Phong.MaPhong, Phong.TinhTrang, Phong.MaLoaiPhong, LoaiPhong.GiaTien "+
-             "FROM  Phong INNER JOIN LoaiPhong ON Phong.MaLoaiPhong = LoaiPhong.MaLoaiPhong "+dk;
+            string sTruyVan = "SELECT  Phong.MaPhong, Phong.TinhTrang, Phong.MaLoaiPhong, LoaiPhong.GiaTien " +
+             "FROM  Phong INNER JOIN LoaiPhong ON Phong.MaLoaiPhong = LoaiPhong.MaLoaiPhong " + dk;
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
             DataProvider.DongKetNoi(con);
             return dt;
         }
-
+        
     }
 }

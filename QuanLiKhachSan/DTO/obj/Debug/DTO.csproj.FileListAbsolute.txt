@@ -8,3 +8,7 @@ C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\bin\Deb
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\Ha Kentty\Documents\GitHub\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.pdb
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DTO\bin\Debug\DTO.dll
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DTO\bin\Debug\DTO.pdb
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.dll
+F:\Git\QuanLiKhachSanNew\QuanLiKhachSan\DTO\obj\Debug\DTO.pdb

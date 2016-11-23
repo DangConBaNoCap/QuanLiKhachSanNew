@@ -25,7 +25,7 @@ namespace DAO
         {
             try
             {
-                string sTruyVan = string.Format("Insert into NhanVien(HoTenNV,NgaySinh,GioiTinh,DiaChi) values(N'{0}','{1}',N'{2}',N'{3}')", NV.HoTenNV,NV.NgaySinh,NV.GioiTinh,NV.DiaChi);
+                string sTruyVan = string.Format("Insert into NhanVien(HoTenNV,NgaySinh,GioiTinh,DiaChi) values(N'{0}','{1}',N'{2}',N'{3}')", NV.HoTenNV, NV.NgaySinh, NV.GioiTinh, NV.DiaChi);
                 con = DataProvider.KetNoi();
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
@@ -42,7 +42,7 @@ namespace DAO
             try
             {
                 con = DataProvider.KetNoi();
-                string sTruyVan = string.Format("Update NhanVien set HoTenNV= N'{0}',NgaySinh='{1}',GioiTinh=N'{2}',DiaChi=N'{3}' where MaNV='{4}'", NV.HoTenNV,NV.NgaySinh,NV.GioiTinh,NV.DiaChi,NV.MaNV);
+                string sTruyVan = string.Format("Update NhanVien set HoTenNV= N'{0}',NgaySinh='{1}',GioiTinh=N'{2}',DiaChi=N'{3}' where MaNV='{4}'", NV.HoTenNV, NV.NgaySinh, NV.GioiTinh, NV.DiaChi, NV.MaNV);
                 DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
                 DataProvider.DongKetNoi(con);
                 return true;
@@ -67,6 +67,14 @@ namespace DAO
             {
                 return false;
             }
+        }
+        public static DataTable LoadDuLieu(string where)
+        {
+            string sTruyVan = "Select * From NhanVien " + where;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
         }
     }
 }

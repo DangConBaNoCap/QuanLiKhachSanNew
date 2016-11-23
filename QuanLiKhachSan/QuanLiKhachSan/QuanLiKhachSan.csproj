@@ -139,6 +139,7 @@
     <Compile Include="Quan Li Khach\KhachHangListView.Designer.cs">
       <DependentUpon>KhachHangListView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quan Li Khach\Scripts\EditHelper.cs" />
     <Compile Include="QuanLiThuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,9 +233,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Quan Li Khach\Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
