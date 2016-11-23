@@ -113,6 +113,12 @@
     <Compile Include="FrmSuaPhieuThue.Designer.cs">
       <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemDichVu.Designer.cs">
+      <DependentUpon>FrmThemDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDichVu.Designer.cs">
+      <DependentUpon>QLDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan Li Khach\FrmSuaDivhVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan Li Khach\FrmSuaDivhVu.Designer.cs">
+      <DependentUpon>FrmSuaDivhVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Quan Li Khach\KhachHangEditView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +193,9 @@
     <EmbeddedResource Include="FrmSuaPhieuThue.resx">
       <DependentUpon>FrmSuaPhieuThue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemDichVu.resx">
+      <DependentUpon>FrmThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmThemTaiKhoan.resx">
       <DependentUpon>FrmThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +212,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLDichVu.resx">
+      <DependentUpon>QLDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan Li Khach\FrmSuaDivhVu.resx">
+      <DependentUpon>FrmSuaDivhVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Quan Li Khach\KhachHangEditView.resx">
       <DependentUpon>KhachHangEditView.cs</DependentUpon>
     </EmbeddedResource>

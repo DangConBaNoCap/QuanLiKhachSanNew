@@ -91,5 +91,20 @@ namespace DAO
                 return false;
             }
         }
+        public static bool Xoa2(SuDungDV_DTO DV)
+        {
+            try
+            {
+                con = DataProvider.KetNoi();
+                string sTruyVan = string.Format("Delete From  SuDungDV  where MaDV='{0}' ", DV.MaDV);
+                DataProvider.ThucThiTruyVanNonQuery(sTruyVan, con);
+                DataProvider.DongKetNoi(con);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

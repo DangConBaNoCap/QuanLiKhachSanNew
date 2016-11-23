@@ -20,6 +20,15 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
+        public static DataTable LoadDuLieuTheoMa(string ma)
+        {
+            string sTruyVan = "Select * From DichVu where MaDV="+ma;
+            con = DataProvider.KetNoi();
+            DataTable dt = DataProvider.LayDataTable(sTruyVan, con);
+            DataProvider.DongKetNoi(con);
+            return dt;
+        }
+
 
         public static bool Them(DichVu_DTO DV)
         {
